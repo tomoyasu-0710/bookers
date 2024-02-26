@@ -1,24 +1,21 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Books</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>title</th>
-      <th>body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  
-  <tbody>
-    
-  </tbody>
-  
-</table>
+<% @book.each do |book| %>
+<p>title</p>
+<span>
+  <%= link_to book.title, book_path(book.id) %>
+</span>
+
+<p>body</p>
+<span>
+  <%= link_to book.body, book_path(book.id) %>
+</span>
+<% end %>
 
 <h2>New book</h2>
-<%= form_with model: @books, url: '/books',method: :post do |f| %>
+
+<%= form_with model: @book, url: '/books',method: :post do |f| %>
 <h2>title</h2>
 <%= f.text_field :title %>
 
