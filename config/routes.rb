@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'homes#top'
   resources :books
-  patch '/books/:id', to: 'books#update', as: :update_book
+  #patch '/books/:id', to: 'books#update', as: :update_book
   #get '/top', to: 'homes#top'
 # get '/top' => 'homes#top'
   #get '/books' => 'books#index'
