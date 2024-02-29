@@ -12,7 +12,7 @@ class BooksController < ApplicationController
     else
       @books = Book.all
       @book = Book.new
-      flash.now[:alert] = "Book Posting Error"
+      flash.now[:alert] = "can't be blank in book posting error"
       render :index
     end
   end
